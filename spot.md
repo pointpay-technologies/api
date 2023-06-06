@@ -106,7 +106,7 @@
       $apiKey = '';
       $apiSecret = '';
   		$request = ''; // /api/v1/order/new
-      $baseUrl = 'https://api.exchange.pointpay.io//';
+      $baseUrl = 'https://api.pointpay.io/';
 
       $data = [
           'request' => $request,
@@ -250,7 +250,7 @@ To obtain private information, use the same methods via POST as an authorized us
   ```
 
   ```java
-  curl -X GET "https://api.exchange.pointpay.io/api/v1/public/markets" -H "accept: application/json"
+  curl -X GET "https://api.pointpay.io/api/v1/public/markets" -H "accept: application/json"
   ```
 
 **Response Parameters:**
@@ -300,7 +300,7 @@ GET /api/v1/public/tickers
 ```
 
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/tickers" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/tickers" -H "accept: application/json"
 ```
 
 **Response Parameters:**
@@ -358,7 +358,7 @@ change | STRING |
 GET /api/v1/public/ticker
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/ticker?market=BTC_USDT" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/ticker?market=BTC_USDT" -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -417,7 +417,7 @@ change | STRING |
 GET /api/v1/public/book
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/book?market=BTC_USDT&side=sell&offset=0&limit=1" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/book?market=BTC_USDT&side=sell&offset=0&limit=1" -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -507,7 +507,7 @@ dealMoney | STRING |
 GET /api/v1/public/history
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/history?market=BTC_USDT&lastId=1&limit=10'" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/history?market=BTC_USDT&lastId=1&limit=10'" -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -567,7 +567,7 @@ limit | NUMERIC | NO | Default 50; min 1; max 1000
 GET /api/v1/public/history/result
 ```
 ```java
-curl -X GET 'https://api.exchange.pointpay.io/api/v1/public/history/result?market=BTC_USDT&since=1&limit=20' -H "accept: application/json"
+curl -X GET 'https://api.pointpay.io/api/v1/public/history/result?market=BTC_USDT&since=1&limit=20' -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -628,7 +628,7 @@ total | STRING |
 GET /api/v1/public/products
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/products" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/products" -H "accept: application/json"
 ```
 
 **Response:**
@@ -663,7 +663,7 @@ response: {
 GET /api/v1/public/symbols
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/symbols" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/symbols" -H "accept: application/json"
 ```
 
 **Response Parameters:**
@@ -709,7 +709,7 @@ Request in body POST method:
 GET /api/v1/public/depth/result
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/depth/result?market=BTC_USDT&limit=5" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/depth/result?market=BTC_USDT&limit=5" -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -778,7 +778,7 @@ amount | STRING |2st parametr - in left side currency
 GET /api/v1/public/kline
 ```
 ```java
-curl -X GET "https://api.exchange.pointpay.io/api/v1/public/kline?market=BTC_USDT&start=1650210446&end=1650390446&interval=60" -H "accept: application/json"
+curl -X GET "https://api.pointpay.io/api/v1/public/kline?market=BTC_USDT&start=1650210446&end=1650390446&interval=60" -H "accept: application/json"
 ```
 
 **Request Parameters:**
@@ -874,7 +874,7 @@ All of this methods can be use only with POST.
   POST /api/v1/order/new
   ```
   ```java
-  curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/order/new' \
+  curl --location --request POST 'https://api.pointpay.io/api/v1/order/new' \
 --header 'Content-Type': 'application/json' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -960,7 +960,7 @@ dealFee | STRING  | Deal Fee of Order
 POST /api/v1/order/cancel
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/order/cancel' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/order/cancel' \
 --header 'Content-Type': 'application/json' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1042,7 +1042,7 @@ dealFee | STRING  | Deal Fee of Order
 POST /api/v1/orders
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/orders' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/orders' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX==' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1143,7 +1143,7 @@ dealFee | STRING  | Deal Fee of Order
 POST /api/v1/account/balances
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/account/balances' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/account/balances' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1207,7 +1207,7 @@ freeze | STRING | active orders amount
 POST /api/v1/account/balance
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/account/balance' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/account/balance' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1260,7 +1260,7 @@ freeze | STRING | active orders amount
 POST /api/v1/account/order
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/account/order' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/account/order' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1338,7 +1338,7 @@ deal | STRING  | Trade amount in 2st Ticker of Pair.
 POST /api/v1/account/trades
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/account/trades' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/account/trades' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
@@ -1415,7 +1415,7 @@ deal | STRING  | Trade amount in 2st Ticker of Pair.
 POST /api/v1/account/order_history_list
 ```
 ```java
-curl --location --request POST 'https://api.exchange.pointpay.io/api/v1/account/order_history' \
+curl --location --request POST 'https://api.pointpay.io/api/v1/account/order_history' \
 --header 'X-TXC-APIKEY': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-PAYLOAD': '0000000000XXXXXXXXXXXXXXXXX' \
 --header 'X-TXC-SIGNATURE': '0000000000XXXXXXXXXXXXXXXXX' \
